@@ -1,33 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int arr[10]={1,3,5,7,9,11};
+    int arr[10]={1,2,3,4,5,6};
     int n=6;
-    int ITEM=9;
-    int BEG=1, END=6, MID;
-    int LOC=0;
-    while(BEG<=END)
-    {
-        MID= (BEG+END)/2;
-        if (ITEM<arr[MID])
-        {
-            END=MID-1;
-        }
-        else
-        {
-            BEG=MID+1;
-        }
-        MID=(BEG+END)/2;
-    }
-    if (ITEM=arr[MID])
-    {
-        LOC=MID;
-        printf("data is found at index %d ", LOC);
-    }
-    else
-    {
-        LOC=0;
-        printf("Data not found");
-    }
-    return 0;
+    int item=4;
+   int LOC=0;
+   for(int i=0; i<n; i++)
+   {
+       if(arr[i]==item)
+       {
+           printf("Data found and index number is %d \n", i);
+           LOC++;
+           break;
+       }
+   }
+    if(LOC==0)
+       {
+           printf("Data not found");
+       }
+   return 0;
 }
