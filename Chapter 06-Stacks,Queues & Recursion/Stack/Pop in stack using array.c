@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+ 
 #define MAXSIZE  5
 
 int stack[MAXSIZE];
